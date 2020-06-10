@@ -1,0 +1,10 @@
+References of the Collector Project
+___________________________________
+
+
+https://pythonprogramming.net/sqlite-update-delete-tutorial/?completed=/graphing-from-sqlite-database/
+
+command to convert ui file in .py
+pyuic5 -x file.ui -o file.py
+
+https://www.youtube.com/watch?v=IGqEwfvxh4I
