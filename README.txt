@@ -19,6 +19,9 @@ create a ui file: new_window_ui.ui  ->>> convert to py >>>> new_window_gui.py
 
 The idea of this project is to learn Python programming, Qt, sqlite and Git. Don't hesitate to submit your code with additional features you might find useful, or discuss the program via github!
 
+Create an exe under windows:
+double click on cx_freeze.bat. It should create a folder containing the executable
+
 Current functionalities:
 - You can add objects to an sqlite database via the user interface
 - currently, you can store the following information  about an object:  dimensions 
