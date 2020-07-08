@@ -32,6 +32,5 @@ Ideas for future developments:
 - add a picture (for example, the bill or warranty). implement a blob in sqlite
 - display the stored picture in a window with a 'print' button
 - store more information about objects (upgrade the edit_line gui)
-- define a method to wrap the project into executables for the 3 main platforms (I tried to run Pyinstaller through wine but wasn't succesful making exe files that run on windows)
 
 
