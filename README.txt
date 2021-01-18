@@ -5,7 +5,8 @@ authors: TlsLizard
 
 Welcome to Collector, a minimalist manager for your objects and collections!
 
-The idea of this project is to learn Python programming, Qt, sqlite and Git. Don't hesitate to submit your code with additional features you might find useful, or discuss the program via github!
+The idea of this project is to learn Python programming, Qt, sqlite and Git. 
+Don't hesitate to submit your code with additional features you might find useful, or discuss the program via github!
 
 Development environment: 
   command line under linux mint, idle, QtCreator,need PyQt5 package installed
@@ -26,7 +27,11 @@ For Developers：
     pyuic5 -x file.ui -o file.py
     
  - Rules for modification:
-    To keep the code concise and facilitate gui upgrades, files ending in _gui should be modified the least possible and changes clearly commented (with a line of # before and after the addition). This way the ui files can be upgraded with Qt creator more easily. Add the code of new callback functions to files other than files ending in _gui when possible.
+    To keep the code concise and facilitate gui upgrades, 
+    files ending in _gui should be modified the least possible 
+    and changes clearly commented (with a line of # before and after the addition). 
+    This way the ui files can be upgraded with Qt creator more easily. 
+    Add the code of new callback functions to files other than files ending in _gui when possible.
  
  - Add a new window:
     Please keep the following format:
