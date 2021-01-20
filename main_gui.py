@@ -9,6 +9,8 @@
 
 from PyQt5 import QtCore, QtGui, QtWidgets
 ############################################
+from PyQt5.QtCore import QCoreApplication
+############################################
 #from read_db import read_from_db
 from line_gui import Ui_line_ui
 from del_line_gui import Ui_del_ui
@@ -39,29 +41,38 @@ class Ui_db_ui(object):
     #############################################
     def setupUi(self, db_ui):
         db_ui.setObjectName("db_ui")
-        db_ui.resize(400, 300)
+        db_ui.resize(420, 420)
         self.label = QtWidgets.QLabel(db_ui)
         self.label.setGeometry(QtCore.QRect(150, 30, 131, 21))
         self.label.setObjectName("label")
         self.add_object_btn = QtWidgets.QPushButton(db_ui)
-        self.add_object_btn.setGeometry(QtCore.QRect(120, 177, 171, 31))
+        self.add_object_btn.setGeometry(QtCore.QRect(120, 137, 171, 31))
         self.add_object_btn.setObjectName("add_object_btn")
         #######################################################
         self.add_object_btn.clicked.connect(self.openWindow)
         #######################################################
         self.read_db_btn = QtWidgets.QPushButton(db_ui)
-        self.read_db_btn.setGeometry(QtCore.QRect(120, 120, 171, 28))
+        self.read_db_btn.setGeometry(QtCore.QRect(100, 80, 211, 31))
         self.read_db_btn.setObjectName("read_db_btn")
         #######################################################
         #self.read_db_btn.clicked.connect(lambda: read_from_db())
         self.read_db_btn.clicked.connect(self.openWindow_3)
         #######################################################
         self.del_object_btn = QtWidgets.QPushButton(db_ui)
-        self.del_object_btn.setGeometry(QtCore.QRect(120, 237, 171, 31))
+        self.del_object_btn.setGeometry(QtCore.QRect(120, 197, 171, 31))
         self.del_object_btn.setObjectName("del_object_btn")
         #######################################################
         self.del_object_btn.clicked.connect(self.openWindow_2)
         #######################################################
+        self.print_object_btn = QtWidgets.QPushButton(db_ui)
+        self.print_object_btn.setGeometry(QtCore.QRect(120, 250, 171, 31))
+        self.print_object_btn.setObjectName("print_object_btn")
+        #######################################################
+        self.quit_btn = QtWidgets.QPushButton(db_ui)
+        self.quit_btn.setGeometry(QtCore.QRect(120, 300, 171, 31))
+        self.quit_btn.setObjectName("quit_btn")
+        ########################################################
+        self.quit_btn.clicked.connect(QCoreApplication.instance().quit)
 
         self.retranslateUi(db_ui)
         QtCore.QMetaObject.connectSlotsByName(db_ui)
@@ -73,7 +84,10 @@ class Ui_db_ui(object):
         self.add_object_btn.setText(_translate("db_ui", "Add an object"))
         self.read_db_btn.setText(_translate("db_ui", "Read the object database"))
         self.del_object_btn.setText(_translate("db_ui", "Delete an object"))
-
+        #########################################################
+        self.print_object_btn.setText(_translate("db_ui", "Print"))
+        #########################################################
+        self.quit_btn.setText(_translate("db_ui", "Quit"))
 
 if __name__ == "__main__":
     import sys
