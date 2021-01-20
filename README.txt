@@ -28,6 +28,10 @@ For Developers：
  - Philosophy
     The windows are designed with Qt Creator then converted to py files using this command:
     pyuic5 -x file.ui -o file.py
+
+ - Add a new window:
+    Please keep the following format:
+    create a ui file: new_window_ui.ui  ->>> convert to py  ->>>> new_window_gui.py
     
  - Rules for modification:
     To keep the code concise and facilitate gui upgrades, 
@@ -35,10 +39,6 @@ For Developers：
     and changes clearly commented (with a line of # before and after the addition). 
     This way the ui files can be upgraded with Qt creator more easily. 
     Add the code of new callback functions to files other than files ending in _gui when possible.
- 
- - Add a new window:
-    Please keep the following format:
-    create a ui file: new_window_ui.ui  ->>> convert to py  ->>>> new_window_gui.py
  
  - Ideas for future developments:
     --- add a quit button to the application
