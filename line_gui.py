@@ -43,7 +43,7 @@ class Ui_line_ui(object): ##changement de nom
         self.quit_btn.setObjectName("quit_btn")
         self.quit_btn.clicked.connect(db_ui.close)
         ############################################################
-        self.add_image_btn.setObjectName("add_image")
+        #self.add_image_btn.setObjectName("add_image")
 
         self.retranslateUi(db_ui)
         QtCore.QMetaObject.connectSlotsByName(db_ui)
@@ -59,10 +59,10 @@ class Ui_line_ui(object): ##changement de nom
         self.quit_btn.setText(_translate("db_ui", "Quit"))
 
     ######################################################
-    def openimage(self):
-        imgName, imgType = QFileDialog.getOpenFileName(self, "Open a photo", "", "*.jpg;;*.png;;All Files(*)")
-        jpg = QtGui.QPixmap(imgName).scaled(self.label.width(), self.label.height())
-        self.label.setPixmap(jpg)
+   #def openimage(self):
+    #    imgName, imgType = QFileDialog.getOpenFileName(self, "Open a photo", "", "*.jpg;;*.png;;All Files(*)")
+    #   jpg = QtGui.QPixmap(imgName).scaled(self.label.width(), self.label.height())
+    #   self.label.setPixmap(jpg)
         
 if __name__ == "__main__":
     import sys
