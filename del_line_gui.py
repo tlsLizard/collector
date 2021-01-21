@@ -51,7 +51,7 @@ if __name__ == "__main__":
     import sys
     app = QtWidgets.QApplication(sys.argv)
     db_ui = QtWidgets.QDialog()
-    ui = Ui_db_ui()
+    ui = Ui_del_ui()
     ui.setupUi(db_ui)
     db_ui.show()
     sys.exit(app.exec_())
