@@ -30,7 +30,7 @@
    <property name="geometry">
     <rect>
      <x>190</x>
-     <y>110</y>
+     <y>130</y>
      <width>90</width>
      <height>28</height>
     </rect>
@@ -44,7 +44,7 @@
     <rect>
      <x>90</x>
      <y>80</y>
-     <width>61</width>
+     <width>101</width>
      <height>28</height>
     </rect>
    </property>
@@ -63,6 +63,19 @@
    </property>
    <property name="text">
     <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="delete_line_2">
+   <property name="geometry">
+    <rect>
+     <x>90</x>
+     <y>130</y>
+     <width>90</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Quit</string>
    </property>
   </widget>
  </widget>

@@ -26,8 +26,13 @@ class Ui_del_ui(object):#changement de nom
         self.object_id = QtWidgets.QLineEdit(db_ui)
         self.object_id.setGeometry(QtCore.QRect(90, 80, 61, 28))
         self.object_id.setObjectName("object_id")
+        #########################################################
+        self.quit_btn = QtWidgets.QPushButton(del_line_ui)
+        self.quit_btn.setGeometry(QtCore.QRect(90, 130, 90, 28))
+        self.quit_btn.setObjectName("quit_btn")
+        self.quit_btn.clicked.connect(db_ui.close)
         ###########################################################
-        self.delete_line.clicked.connect(lambda: delete_line(int(self.object_id.text())))
+        self.quit_btn.clicked.connect(lambda: delete_line(int(self.object_id.text())))
         ##renvoyer un message d'erreur si l'id n'a pas d'entree dans la table
         ###########################################################
         self.msg_box = QtWidgets.QLabel(db_ui)
@@ -44,6 +49,7 @@ class Ui_del_ui(object):#changement de nom
         self.label.setText(_translate("db_ui", "Delete a line from the object table"))
         self.delete_line.setText(_translate("db_ui", "Delete"))
         self.object_id.setText(_translate("db_ui", "object_id"))
+        self.quit_btn.setText(_translate("db_ui", "Quit"))
 
 
 if __name__ == "__main__":

@@ -16,21 +16,21 @@
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
-     <x>100</x>
+     <x>90</x>
      <y>30</y>
-     <width>201</width>
+     <width>231</width>
      <height>21</height>
     </rect>
    </property>
    <property name="text">
-    <string>Add a ligne to the object table</string>
+    <string>Add an item to the object table</string>
    </property>
   </widget>
   <widget class="QPushButton" name="add_line">
    <property name="geometry">
     <rect>
-     <x>160</x>
-     <y>130</y>
+     <x>210</x>
+     <y>190</y>
      <width>90</width>
      <height>28</height>
     </rect>
@@ -50,6 +50,41 @@
    </property>
    <property name="text">
     <string>object name</string>
+   </property>
+   <property name="frame">
+    <bool>true</bool>
+   </property>
+   <property name="readOnly">
+    <bool>false</bool>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="add_image_btn">
+   <property name="geometry">
+    <rect>
+     <x>90</x>
+     <y>130</y>
+     <width>121</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <property name="autoFillBackground">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>Add a picture</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="quit_btn">
+   <property name="geometry">
+    <rect>
+     <x>90</x>
+     <y>190</y>
+     <width>90</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Quit</string>
    </property>
   </widget>
  </widget>
