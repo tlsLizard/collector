@@ -32,5 +32,7 @@ _need PyQt5 package installed_
   * Display the stored picture in a window with a 'print' button
   * Store more information about objects (upgrade the `edit_line_gui`)
 
-![DianGarden]()
 
+
+Python school by DianGarden  
+  ![DianGarden](/Diangarden.png)
