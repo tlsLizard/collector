@@ -53,7 +53,7 @@ class Ui_line_ui(object): ##changement de nom
         db_ui.setWindowTitle(_translate("db_ui", "Dialog"))
         self.label.setText(_translate("db_ui", "Add a ligne to the object table"))
         self.add_line.setText(_translate("db_ui", "Create"))
-        self.object_name.setText(_translate("db_ui", "object name"))
+        self.object_name.setPlaceholderText(_translate("db_ui", "object name"))
         ##############################################################
         self.add_image_btn.setText(_translate("db_ui", "Add a picture"))
         self.quit_btn.setText(_translate("db_ui", "Quit"))

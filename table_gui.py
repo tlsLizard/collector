@@ -54,7 +54,7 @@ class Ui_table_ui(object):
         table_ui.setWindowTitle(_translate("table_ui", "Dialog"))
         self.label.setText(_translate("table_ui", "Your collection"))
         self.edit_line.setText(_translate("table_ui", "Edit a line"))
-        self.line_to_edit.setText(_translate("table_ui", "line"))
+        self.line_to_edit.setPlaceholderText(_translate("table_ui", "line"))
     ############################################################ 
     def load_db(self):
         try:

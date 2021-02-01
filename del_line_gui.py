@@ -43,7 +43,7 @@ class Ui_del_ui(object):#changement de nom
         db_ui.setWindowTitle(_translate("db_ui", "Dialog"))
         self.label.setText(_translate("db_ui", "Delete a line from the object table"))
         self.delete_line.setText(_translate("db_ui", "Delete"))
-        self.object_id.setText(_translate("db_ui", "object_id"))
+        self.object_id.setPlaceholderText(_translate("db_ui", "object_id"))
         self.quit_btn.setText(_translate("db_ui", "Quit"))
 
 
