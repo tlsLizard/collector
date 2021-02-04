@@ -62,7 +62,7 @@ class Ui_table_ui(object):
             c=conn.cursor()
             c.execute("SELECT * FROM objects")
             data = c.fetchall()
-            for row in data:    
+            for row in data:
                 items = [
                     QtGui.QStandardItem(str(field))##
                     for field in row

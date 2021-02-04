@@ -9,8 +9,6 @@
 
 from PyQt5 import QtCore, QtGui, QtWidgets
 ############################################
-from PyQt5.QtCore import QCoreApplication
-############################################
 #from read_db import read_from_db
 from line_gui import Ui_line_ui
 from del_line_gui import Ui_del_ui
@@ -72,7 +70,7 @@ class Ui_db_ui(object):
         self.quit_btn.setGeometry(QtCore.QRect(120, 300, 171, 31))
         self.quit_btn.setObjectName("quit_btn")
         ########################################################
-        self.quit_btn.clicked.connect(QCoreApplication.instance().quit)
+        self.quit_btn.clicked.connect(QtCore.QCoreApplication.instance().quit)
 
         self.retranslateUi(db_ui)
         QtCore.QMetaObject.connectSlotsByName(db_ui)

@@ -63,7 +63,7 @@ def delete_line(index):
             conn.close()
             print("the sqlite connection is closed")
 
-def edit_line(index,x,x_unit,y,y_unit,z,z_unit):
+def edit_line(index,x,x_unit,y,y_unit,z,z_unit,value,currency):
     try:
         conn=sqlite3.connect('objects.db')
         c=conn.cursor()
@@ -71,9 +71,10 @@ def edit_line(index,x,x_unit,y,y_unit,z,z_unit):
         sql_edit_query = "UPDATE objects\
                           SET x={},length_unit_x='{}',\
                           y={},length_unit_y='{}',\
-                          z={},length_unit_z='{}'\
+                          z={},length_unit_z='{}',\
+                          value={},currency='{}'\
                           WHERE id={};\
-                          ".format(x,x_unit,y,y_unit,z,z_unit,index)
+                          ".format(x,x_unit,y,y_unit,z,z_unit,value,currency,index)
         c.execute(sql_edit_query)
         conn.commit()
         print("Record edited successfully ")
@@ -121,6 +122,7 @@ def get_name(id):
         conn = sqlite3.connect('objects.db')
         c = conn.cursor()
         sqlite_select_query="SELECT name from objects WHERE id={}".format(id)
+        c.execute(sqlite_select_query)
         data=c.fetchall()
         print(data)
         c.close()
