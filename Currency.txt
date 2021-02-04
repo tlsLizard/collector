@@ -1,0 +1,46 @@
+Currency		code	symbol
+Australian dollars	AUD	$
+Bangladeshi taka	BDT	৳
+Brazilian real	BRL	R$
+Bulgarian lev	BGN	лв
+Canadian dollars	CAD	$
+Chilean peso	CLP	$
+Chinese yuan	CNY	¥ 
+Colombian peso	COP	$
+Croatian Kuna	HRK	kn
+Czech koruna	CZK	Kč
+Danish krone	DKK	kr
+Euro		EUR	€
+Georgian lari	GEL	₾
+Hong Kong dollar	HKD	HK$
+Hungarian forint	HUF	ft
+Indian rupee	INR	₹
+Indonesian rupiah	IDR	Rp
+Israeli shekel	ILS	₪
+Japanese yen	JPY	¥
+Kenyan shilling	KES	Ksh
+Malaysian ringgit	MYR	RM
+Mexican peso	MXN	$
+Moroccan dirham	MAD	.د.م
+New Zealand dollar	NZD	$
+Nigerian naira	NGN	₦
+Norwegian krone	NOK	kr
+Pakistani rupee	PKR	Rs
+Peruvian sol	PEN	S/.
+Philippine peso	PHP	₱
+Polish zloty	PLN	zł
+Romanian leu	RON	lei
+Russian ruble	RUB	₽
+Singapore dollar	SGD	$
+South african rand	ZAR	R
+South Korean won	KRW	₩
+Sri Lankan rupee	LKR	Rs
+Swedish krona	SEK	kr
+Swiss franc	CHF	CHF
+Thai baht		THB	฿
+Turkish lira	TRY	₺
+Emirati dirham	AED	د.إ
+Ukrainian hryvna	UAH	₴
+Pounds sterling	GBP	£
+US dollar		USD	$
+Vietnamese dong	VND	₫
