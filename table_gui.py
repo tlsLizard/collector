@@ -51,8 +51,8 @@ class Ui_table_ui(object):
 
     def retranslateUi(self, table_ui):
         _translate = QtCore.QCoreApplication.translate
-        table_ui.setWindowTitle(_translate("table_ui", "Dialog"))
-        self.label.setText(_translate("table_ui", "Your collection"))
+        table_ui.setWindowTitle(_translate("table_ui", "Show your collections"))
+        self.label.setText(_translate("table_ui", "Your collections"))
         self.edit_line.setText(_translate("table_ui", "Edit a line"))
         self.line_to_edit.setPlaceholderText(_translate("table_ui", "line"))
     ############################################################ 

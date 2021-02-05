@@ -40,7 +40,7 @@ class Ui_del_ui(object):#changement de nom
 
     def retranslateUi(self, db_ui):
         _translate = QtCore.QCoreApplication.translate
-        db_ui.setWindowTitle(_translate("db_ui", "Dialog"))
+        db_ui.setWindowTitle(_translate("db_ui", "Delete an object"))
         self.label.setText(_translate("db_ui", "Delete a line from the object table"))
         self.delete_line.setText(_translate("db_ui", "Delete"))
         self.object_id.setPlaceholderText(_translate("db_ui", "object_id"))

@@ -91,7 +91,7 @@ class Ui_edit_ui(QtWidgets.QMainWindow):
 
     def retranslateUi(self, edit_ui):
         _translate = QtCore.QCoreApplication.translate
-        edit_ui.setWindowTitle(_translate("edit_ui", "Dialog"))
+        edit_ui.setWindowTitle(_translate("edit_ui", "Edit your collections"))
         self.label.setText(_translate("edit_ui", "Edit an object"))
         self.x.setPlaceholderText(_translate("edit_ui", "x"))
         self.y.setPlaceholderText(_translate("edit_ui", "y"))

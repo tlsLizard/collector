@@ -50,7 +50,7 @@ class Ui_line_ui(object): ##changement de nom
 
     def retranslateUi(self, db_ui):
         _translate = QtCore.QCoreApplication.translate
-        db_ui.setWindowTitle(_translate("db_ui", "Dialog"))
+        db_ui.setWindowTitle(_translate("db_ui", "Add an object"))
         self.label.setText(_translate("db_ui", "Add a ligne to the object table"))
         self.add_line.setText(_translate("db_ui", "Create"))
         self.object_name.setPlaceholderText(_translate("db_ui", "object name"))
