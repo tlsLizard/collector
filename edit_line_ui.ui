@@ -164,7 +164,7 @@
    <property name="geometry">
     <rect>
      <x>50</x>
-     <y>330</y>
+     <y>400</y>
      <width>90</width>
      <height>28</height>
     </rect>
@@ -234,6 +234,37 @@
      <string/>
     </property>
    </item>
+  </widget>
+  <widget class="QWidget" name="horizontalLayoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>280</y>
+     <width>271</width>
+     <height>101</height>
+    </rect>
+   </property>
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <item>
+     <widget class="QPushButton" name="addphoto_btn">
+      <property name="text">
+       <string>Add a photo</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLabel" name="photolabel">
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(255, 255, 255);
+font: italic 11pt &quot;Ubuntu Mono&quot;;
+</string>
+      </property>
+      <property name="text">
+       <string>present the bill</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
   </widget>
  </widget>
  <resources/>

@@ -32,7 +32,7 @@ class Ui_line_ui(object): ##changement de nom
         self.object_name.setFrame(True)
         self.object_name.setReadOnly(False)
         ###########################################################
-        self.add_line.clicked.connect(lambda: create_line(get_max_id()+1,self.object_name.text()))
+        self.add_line.clicked.connect(lambda: create_line(count_items()+1,self.object_name.text()))
         ###########################################################
         self.add_image_btn = QtWidgets.QPushButton(db_ui)
         self.add_image_btn.setGeometry(QtCore.QRect(90, 130, 121, 25))

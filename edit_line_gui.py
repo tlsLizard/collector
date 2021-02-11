@@ -9,6 +9,10 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
 #################################################
 #from PyQt5.QtWidgets import  QFileDialog, QMainWindow
+from PyQt5.QtGui import *
+from PyQt5.QtWidgets import *
+from PyQt5.QtCore import *
+
 from line import edit_line, convertToBinaryData,insertBLOB,get_name
 #################################################
 from currency import monnaie
@@ -59,13 +63,13 @@ class Ui_edit_ui(QtWidgets.QMainWindow):
         self.label_id.setText(str(index))
         ################################################
         self.label_name = QtWidgets.QLabel(edit_ui)
-        self.label_name.setGeometry(QtCore.QRect(650, 60, 58, 16))
+        self.label_name.setGeometry(QtCore.QRect(100, 60, 58, 16))
         self.label_name.setObjectName("label_name")
         ################################################
         self.label_name.setText("text")
         ################################################
         self.button_edit = QtWidgets.QPushButton(edit_ui)
-        self.button_edit.setGeometry(QtCore.QRect(50, 330, 90, 28))
+        self.button_edit.setGeometry(QtCore.QRect(50, 400, 90, 28))
         self.button_edit.setObjectName("button_edit")
         ##############################################################
         self.button_edit.clicked.connect(lambda: edit_line(index,self.x.text(),self.comboBox.currentText(),self.y.text(),self.comboBox_2.currentText(),self.z.text(),self.comboBox_3.currentText(),self.value.text(),self.comboBox_4.currentText()))##
@@ -75,7 +79,7 @@ class Ui_edit_ui(QtWidgets.QMainWindow):
         self.value.setText("")
         self.value.setObjectName("value")
         self.comboBox_4 = QtWidgets.QComboBox(edit_ui)
-        self.comboBox_4.setGeometry(QtCore.QRect(190, 230, 200, 24))
+        self.comboBox_4.setGeometry(QtCore.QRect(190, 230, 122, 25))
         self.comboBox_4.setMaxVisibleItems(8)
         self.comboBox_4.setSizeAdjustPolicy(QtWidgets.QComboBox.AdjustToContents)
         self.comboBox_4.setIconSize(QtCore.QSize(30, 16))
@@ -85,9 +89,38 @@ class Ui_edit_ui(QtWidgets.QMainWindow):
         self.comboBox_4.setItemText(45, "")
         ################################################################
         self.comboBox_4.setSizeAdjustPolicy(QtWidgets.QComboBox.AdjustToMinimumContentsLength)
+        #####################################
+        self.horizontalLayoutWidget = QtWidgets.QWidget(edit_ui)
+        self.horizontalLayoutWidget.setGeometry(QtCore.QRect(50, 280, 271, 101))
+        self.horizontalLayoutWidget.setObjectName("horizontalLayoutWidget")
+        self.horizontalLayout = QtWidgets.QHBoxLayout(self.horizontalLayoutWidget)
+        self.horizontalLayout.setContentsMargins(0, 0, 0, 0)
+        self.horizontalLayout.setObjectName("horizontalLayout")
+        self.addphoto_btn = QtWidgets.QPushButton(self.horizontalLayoutWidget)
+        self.addphoto_btn.setObjectName("addphoto_btn")
+        self.addphoto_btn.clicked.connect(self.openimage)
+        self.horizontalLayout.addWidget(self.addphoto_btn)
+        self.photolabel = QtWidgets.QLabel(self.horizontalLayoutWidget)
+        self.photolabel.setStyleSheet("background-color: rgb(255, 255, 255);\n"
+"font: italic 11pt \"Ubuntu Mono\";\n"
+"")
+        self.photolabel.setObjectName("photolabel")
+        self.horizontalLayout.addWidget(self.photolabel)
 
         self.retranslateUi(edit_ui)
         QtCore.QMetaObject.connectSlotsByName(edit_ui)
+
+###################3
+    def openimage(self):
+        imgName,imgType = QFileDialog.getOpenFileName(self,"Add a photo","","Image files (*.jpg *.gif *.png *.jpeg)")
+        jpg = QtGui.QPixmap(imgName).scaled(self.photolabel.width(),self.photolabel.height())
+        self.photolabel.setPixmap(jpg)
+        if imgName == "":
+            print("\nUnselect")
+        else :
+            print("\nYou choose:")
+            print(imgName)
+            print("\nType:",imgType)
 
     def retranslateUi(self, edit_ui):
         _translate = QtCore.QCoreApplication.translate
@@ -109,6 +142,9 @@ class Ui_edit_ui(QtWidgets.QMainWindow):
         for i in range(0,45):
             currency = monnaie()
             self.comboBox_4.setItemText(i, _translate("edit_ui",''.join(currency[i+1])))
+        #####################################
+        self.addphoto_btn.setText(_translate("edit_ui", "Add a photo"))
+        self.photolabel.setText(_translate("edit_ui", "present the bill"))
 
 if __name__ == "__main__" :
     import sys
