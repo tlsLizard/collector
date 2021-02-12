@@ -5,7 +5,7 @@
 # Created by: PyQt5 UI code generator 5.9.2
 #
 # WARNING! All changes made in this file will be lost!
-
+ 
 from PyQt5 import QtCore, QtGui, QtWidgets
 #################################################
 #from PyQt5.QtWidgets import  QFileDialog, QMainWindow
@@ -61,6 +61,7 @@ class Ui_edit_ui(QtWidgets.QMainWindow):
         self.label_id.setObjectName("label_id")
         ################################################
         self.label_id.setText(str(index))
+        
         ################################################
         self.label_name = QtWidgets.QLabel(edit_ui)
         self.label_name.setGeometry(QtCore.QRect(100, 60, 58, 16))
@@ -73,6 +74,9 @@ class Ui_edit_ui(QtWidgets.QMainWindow):
         self.button_edit.setObjectName("button_edit")
         ##############################################################
         self.button_edit.clicked.connect(lambda: edit_line(index,self.x.text(),self.comboBox.currentText(),self.y.text(),self.comboBox_2.currentText(),self.z.text(),self.comboBox_3.currentText(),self.value.text(),self.comboBox_4.currentText()))##
+        #img = cv2.imread(imgName)
+        self.button_edit.clicked.connect(lambda: insertBLOB(index,imgName))
+        self.button_edit.clicked.connect(edit_ui.close)
         ##############################################################
         self.value = QtWidgets.QLineEdit(edit_ui)
         self.value.setGeometry(QtCore.QRect(50, 230, 113, 28))
@@ -110,8 +114,9 @@ class Ui_edit_ui(QtWidgets.QMainWindow):
         self.retranslateUi(edit_ui)
         QtCore.QMetaObject.connectSlotsByName(edit_ui)
 
-###################3
+######################
     def openimage(self):
+        global imgName
         imgName,imgType = QFileDialog.getOpenFileName(self,"Add a photo","","Image files (*.jpg *.gif *.png *.jpeg)")
         jpg = QtGui.QPixmap(imgName).scaled(self.photolabel.width(),self.photolabel.height())
         self.photolabel.setPixmap(jpg)

@@ -33,17 +33,17 @@ class Ui_line_ui(object): ##changement de nom
         self.object_name.setReadOnly(False)
         ###########################################################
         self.add_line.clicked.connect(lambda: create_line(count_items()+1,self.object_name.text()))
+<<<<<<< HEAD
+=======
+        self.add_line.clicked.connect(db_ui.close)
+>>>>>>> amel
         ###########################################################
-        self.add_image_btn = QtWidgets.QPushButton(db_ui)
-        self.add_image_btn.setGeometry(QtCore.QRect(90, 130, 121, 25))
-        self.add_image_btn.setAutoFillBackground(False)
-        self.add_image_btn.setObjectName("add_image_btn")
         self.quit_btn = QtWidgets.QPushButton(db_ui)
         self.quit_btn.setGeometry(QtCore.QRect(90, 190, 90, 28))
         self.quit_btn.setObjectName("quit_btn")
         self.quit_btn.clicked.connect(db_ui.close)
         ############################################################
-        #self.add_image_btn.setObjectName("add_image")
+
 
         self.retranslateUi(db_ui)
         QtCore.QMetaObject.connectSlotsByName(db_ui)
@@ -55,15 +55,8 @@ class Ui_line_ui(object): ##changement de nom
         self.add_line.setText(_translate("db_ui", "Create"))
         self.object_name.setPlaceholderText(_translate("db_ui", "object name"))
         ##############################################################
-        self.add_image_btn.setText(_translate("db_ui", "Add a picture"))
         self.quit_btn.setText(_translate("db_ui", "Quit"))
-
-    ######################################################
-   #def openimage(self):
-    #    imgName, imgType = QFileDialog.getOpenFileName(self, "Open a photo", "", "*.jpg;;*.png;;All Files(*)")
-    #   jpg = QtGui.QPixmap(imgName).scaled(self.label.width(), self.label.height())
-    #   self.label.setPixmap(jpg)
-        
+    
 if __name__ == "__main__":
     import sys
     app = QtWidgets.QApplication(sys.argv)

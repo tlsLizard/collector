@@ -28,6 +28,7 @@ class Ui_del_ui(object):#changement de nom
         self.object_id.setObjectName("object_id")
         ###########################################################
         self.delete_line.clicked.connect(lambda: delete_line(int(self.object_id.text())))
+        self.delete_line.clicked.connect(db_ui.close)
         ##renvoyer un message d'erreur si l'id n'a pas d'entree dans la table
         ###########################################################
         self.quit_btn = QtWidgets.QPushButton(db_ui)
