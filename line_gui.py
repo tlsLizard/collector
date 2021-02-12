@@ -33,10 +33,8 @@ class Ui_line_ui(object): ##changement de nom
         self.object_name.setReadOnly(False)
         ###########################################################
         self.add_line.clicked.connect(lambda: create_line(count_items()+1,self.object_name.text()))
-<<<<<<< HEAD
-=======
         self.add_line.clicked.connect(db_ui.close)
->>>>>>> amel
+        
         ###########################################################
         self.quit_btn = QtWidgets.QPushButton(db_ui)
         self.quit_btn.setGeometry(QtCore.QRect(90, 190, 90, 28))
