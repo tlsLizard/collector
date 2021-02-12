@@ -77,7 +77,7 @@ class Ui_db_ui(object):
 
     def retranslateUi(self, db_ui):
         _translate = QtCore.QCoreApplication.translate
-        db_ui.setWindowTitle(_translate("db_ui", "Dialog"))
+        db_ui.setWindowTitle(_translate("db_ui", "Collector"))
         self.label.setText(_translate("db_ui", "Choose an action"))
         self.add_object_btn.setText(_translate("db_ui", "Add an object"))
         self.read_db_btn.setText(_translate("db_ui", "Read the object database"))

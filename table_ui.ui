@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Dialog</string>
+   <string>Your collections</string>
   </property>
   <widget class="QLabel" name="label">
    <property name="geometry">
@@ -23,7 +23,7 @@
     </rect>
    </property>
    <property name="text">
-    <string>Your collection</string>
+    <string>Your collections</string>
    </property>
    <property name="alignment">
     <set>Qt::AlignCenter</set>

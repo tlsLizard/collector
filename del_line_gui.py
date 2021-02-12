@@ -28,6 +28,7 @@ class Ui_del_ui(object):#changement de nom
         self.object_id.setObjectName("object_id")
         ###########################################################
         self.delete_line.clicked.connect(lambda: delete_line(int(self.object_id.text())))
+        self.delete_line.clicked.connect(db_ui.close)
         ##renvoyer un message d'erreur si l'id n'a pas d'entree dans la table
         ###########################################################
         self.quit_btn = QtWidgets.QPushButton(db_ui)
@@ -40,7 +41,7 @@ class Ui_del_ui(object):#changement de nom
 
     def retranslateUi(self, db_ui):
         _translate = QtCore.QCoreApplication.translate
-        db_ui.setWindowTitle(_translate("db_ui", "Dialog"))
+        db_ui.setWindowTitle(_translate("db_ui", "Delete an object"))
         self.label.setText(_translate("db_ui", "Delete a line from the object table"))
         self.delete_line.setText(_translate("db_ui", "Delete"))
         self.object_id.setPlaceholderText(_translate("db_ui", "object_id"))

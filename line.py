@@ -134,3 +134,39 @@ def get_name(id):
             conn.close()
             print("the sqlite connection is closed")
         return data[0]
+'''
+def insert_image_db(id,image):
+    img_blob = sqlite3.Binary(image)
+    try:
+        conn = sqlite3.connect('objects.db')
+        c = conn.cursor()
+        sqlite_select_query = """ UPDATE objects
+                                  SET bill= (?)
+                                  WHERE id={}""".format(id)
+        c.execute(sqlite_select_query,img_blob)
+        conn.commit()
+        conn.close()
+    except sqlite3.Error as error:
+        print("Failed to insert blob data into sqlite table", error)
+    finally:
+        if (conn):
+            conn.close()
+            print("the sqlite connection is closed")
+
+def retrieve_image_db(id): #afficher la photo
+    try:
+        conn = sqlite3.connect("objects.db")
+        c = conn.cursor()
+        sqlite_select_query = """SELECT bill FROM WHERE id={}""".format(id)
+        c.execute(sqlite_select_query)
+        image = fetchone()
+        image = np.array(image[0])
+        conn.close()
+        return image
+    except sqlite3.Error as error:
+        print("Failed to insert blob data into sqlite table", error)
+    finally:
+        if (conn):
+            conn.close()
+            print("the sqlite connection is closed")
+    '''
