@@ -10,7 +10,7 @@ Welcome to Collector :blush:  a minimalist manager for your collection.
 double click on `cx_freeze.bat`. It will create a folder containing the executable (requires cx_freeze)
 
 #### Current functionalities:
-  - You can add objects to a ***database*** via the button : ```Add an object```
+  - You can add objects to the ***DataBase (DB)*** via the button : ```Add an object```
   - You can store the following information  about an object:  ***dimensions*** , ***value*** , ***currency*** , ***image***
   - The list of objects and their information can be displayed via the button : ```Read the object database```
 
