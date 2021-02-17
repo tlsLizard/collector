@@ -28,7 +28,7 @@ _need PyQt5 package installed_
 * **Ideas for future developments:**
   * Display the picture associated with the DataBase entry in a window with a 'print' button
   * Store more information about objects (upgrade the `edit_line_ui.py`): let's discuss your ideas!
-  * Browse [Collector's continuous improvement plan](https://docs.google.com/spreadsheets/d/1C8u6lvReYK2EKYNKb6sXuTvEO1Q9m0ytoQSeTaUkn2k/edit?usp=sharing) for ideas on how to contribute. Request edit rights to this document to contribute even further !
+  * Browse [Collector's continuous improvement plan](https://docs.google.com/spreadsheets/d/1C8u6lvReYK2EKYNKb6sXuTvEO1Q9m0ytoQSeTaUkn2k/edit?usp=sharing) for ideas on how to contribute. Request edit rights to this document to contribute even further : [tlsLizard](mailto:python.school@diangarden.com)!
 
 
 
